@@ -20,7 +20,8 @@ public class RobotCSVWriter {
         LocalDate currentDate = LocalDate.now();
 
         for (Robot robot : robotsMap.values()) {
-            String filename = robot.getId() + "-" + robot.getModel() + "-" + currentDate.format(formatterForFileNaming) + ".csv";
+            String filename = robot.getId() + "-" + robot.getModel() + "-" + currentDate.format(formatterForFileNaming)
+                    + ".csv";
             String filepath = folderpath + "/" + filename;
             BufferedWriter writer = new BufferedWriter(new FileWriter(filepath));
 

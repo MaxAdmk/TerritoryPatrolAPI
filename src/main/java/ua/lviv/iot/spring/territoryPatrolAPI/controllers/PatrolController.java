@@ -49,7 +49,7 @@ public class PatrolController {
     private static class UpdateRequest {
         private int id;
 
-        private List<String> route;
+        private String route;
         private LocalDateTime startTime;
         private LocalDateTime endTime;
     }

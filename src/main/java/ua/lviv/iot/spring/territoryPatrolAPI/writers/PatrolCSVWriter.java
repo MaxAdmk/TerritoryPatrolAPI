@@ -19,7 +19,8 @@ public class PatrolCSVWriter {
         LocalDate currentDate = LocalDate.now();
 
         for (Patrol patrol : patrolsMap.values()) {
-            String filename = patrol.getId() + "-" + "Patrol" + "-" + currentDate.format(formatterForFileNaming) + ".csv";
+            String filename = patrol.getId() + "-" + "Patrol" + "-" + currentDate.format(formatterForFileNaming)
+                    + ".csv";
             String filepath = folderpath + "/" + filename;
             BufferedWriter writer = new BufferedWriter(new FileWriter(filepath));
             writer.write("Patrol");

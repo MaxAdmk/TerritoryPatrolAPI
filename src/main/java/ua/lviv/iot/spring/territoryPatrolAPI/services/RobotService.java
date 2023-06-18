@@ -43,7 +43,8 @@ public class RobotService {
         robotsMap.remove(robotId);
     }
 
-    public void updateRobot(Patrol patrolOfRobot, int batteryLevel, String model, String status, Integer idForUpdating) {
+    public void updateRobot(Patrol patrolOfRobot, int batteryLevel, String model, String status,
+                            Integer idForUpdating) {
         Robot robot = robotsMap.get(idForUpdating);
         if (robot != null) {
             robot.setPatrolOfRobot(patrolOfRobot);

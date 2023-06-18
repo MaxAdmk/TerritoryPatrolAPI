@@ -42,7 +42,8 @@ public class PatrolService {
         patrolsMap.remove(patrolId);
     }
 
-    public void updatePatrol(List<String> route, LocalDateTime startTime, LocalDateTime endTime, Integer idForUpdating) {
+    public void updatePatrol(String route, LocalDateTime startTime, LocalDateTime endTime,
+                             Integer idForUpdating) {
         Patrol patrol = patrolsMap.get(idForUpdating);
         if (patrol != null) {
             patrol.setRoute(route);

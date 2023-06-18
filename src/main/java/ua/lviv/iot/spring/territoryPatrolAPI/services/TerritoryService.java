@@ -43,7 +43,8 @@ public class TerritoryService {
         territoriesMap.remove(territoryId);
     }
 
-    public void updateTerritory(HashMap robotsOfTerritory, double area, String name, String description, Integer idForUpdating) {
+    public void updateTerritory(HashMap robotsOfTerritory, double area, String name, String description,
+                                Integer idForUpdating) {
         Territory territory = territoriesMap.get(idForUpdating);
         if (territory != null) {
             territory.setRobotsOfTerritory(robotsOfTerritory);

@@ -36,7 +36,8 @@ public class TerritoryCSVWriter {
         writer.newLine();
         for (Robot robot : territory.getRobotsOfTerritory().values()) {
             writer.write(String.format("%d,%s,%d,%s,%s",
-                    robot.getId(), robot.getPatrolOfRobot(), robot.getBatteryLevel(), robot.getModel(), robot.getStatus()));
+                    robot.getId(), robot.getPatrolOfRobot(), robot.getBatteryLevel(), robot.getModel(),
+                    robot.getStatus()));
             writer.newLine();
         }
         writer.write("patrolsOfRobots");

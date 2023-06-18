@@ -60,7 +60,8 @@ public class TerritoryController {
     @PutMapping(path = "/update/{id}")
     public ResponseEntity<String> updateTerritory(@RequestBody TerritoryController.UpdateRequest updateRequest,
                                                   @PathVariable("id") Integer idForUpdating) {
-        territoryService.updateTerritory(updateRequest.getRobotsOfTerritory(), updateRequest.getArea(), updateRequest.getName(),
+        territoryService.updateTerritory(updateRequest.getRobotsOfTerritory(), updateRequest.getArea(),
+                updateRequest.getName(),
                 updateRequest.getDescription(), idForUpdating);
         return ResponseEntity.ok("Territory updated successfully");
     }
